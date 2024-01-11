@@ -28,6 +28,7 @@
     "eslint": "8.55.0",
     "eslint-config-htmlacademy": "^10.0.1",
     "glob": "10.3.10",
+    "gulp-gh-pages": "^0.5.4",
     "html-validate": "8.7.4",
     "linthtml-config-htmlacademy": "^1.0.14",
     "sass": "1.69.5",
