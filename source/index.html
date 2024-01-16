@@ -34,7 +34,7 @@
   <body>
     <div class="wrapper">
       <div data-test="slider">
-        <header class="header">
+        <header class="header header--overlay" data-header="header">
           <div class="header__container container">
             <a
               class="header__logo logo"
@@ -46,12 +46,12 @@
             </a>
             <nav class="header__nav">
               <button
-                class="header__burger button"
+                class="header__burger"
                 type="button"
                 aria-label="Переключатель отображения меню"
                 aria-pressed="false"
                 data-burger="burger">
-                <span>Меню</span>
+                <span class="header__burger-text">Меню</span>
                 <span class="header__burger-icon">
                   <svg width="22" height="22">
                     <use href="__spritemap#sprite-menu"></use>
@@ -65,63 +65,132 @@
               </button>
               <ul class="header__nav-list">
                 <li class="header__nav-item">
-                  <a href="#">О проекте</a>
+                  <a
+                    class="header__nav-link"
+                    href="#"
+                    data-close-menu="close-menu"
+                    >О проекте</a
+                  >
                 </li>
-                <li class="header__nav-item header__nav-item--active">
-                  <a href="#" data-close-menu="close-menu">
+                <li class="header__nav-item">
+                  <a
+                    class="header__nav-link header__nav-link--close"
+                    href="#"
+                    data-close-menu="close-menu">
                     <span>Программы</span>
                     <svg width="12" height="12">
-                      <use href="img/sprite.svg#arrow-down"></use>
+                      <use href="__spritemap#sprite-arrow-down"></use>
                     </svg>
                   </a>
                   <ul class="header__sub-list">
-                    <li class="header__sub-item header__sub-item--active">
-                      <a href="#" data-close-menu="close-menu">Стажировки</a>
+                    <li class="header__sub-item">
+                      <a
+                        class="header__nav-link"
+                        href="#"
+                        data-close-menu="close-menu"
+                        >Стажировки</a
+                      >
                     </li>
                     <li class="header__sub-item">
-                      <a href="#" data-close-menu="close-menu">Волонтёрство</a>
+                      <a
+                        class="header__nav-link"
+                        href="#"
+                        data-close-menu="close-menu"
+                        >Волонтёрство</a
+                      >
                     </li>
                     <li class="header__sub-item">
-                      <a href="#" data-close-menu="close-menu">Учёба</a>
+                      <a
+                        class="header__nav-link"
+                        href="#"
+                        data-close-menu="close-menu"
+                        >Учёба</a
+                      >
                     </li>
                     <li class="header__sub-item">
-                      <a href="#" data-close-menu="close-menu">Религия</a>
+                      <a
+                        class="header__nav-link"
+                        href="#"
+                        data-close-menu="close-menu"
+                        >Религия</a
+                      >
                     </li>
                   </ul>
                 </li>
                 <li class="header__nav-item">
-                  <a href="#" data-close-menu="close-menu">Как поехать</a>
+                  <a
+                    class="header__nav-link"
+                    href="#"
+                    data-close-menu="close-menu"
+                    >Как поехать</a
+                  >
                 </li>
                 <li class="header__nav-item">
-                  <a href="#" data-close-menu="close-menu">Отзывы</a>
+                  <a
+                    class="header__nav-link"
+                    href="#"
+                    data-close-menu="close-menu"
+                    >Отзывы</a
+                  >
                 </li>
                 <li class="header__nav-item">
-                  <a href="#" data-close-menu="close-menu">
+                  <a
+                    class="header__nav-link header__nav-link--close"
+                    href="#"
+                    data-close-menu="close-menu">
                     <span>Новости</span>
                     <svg width="12" height="12">
-                      <use href="img/sprite.svg#arrow-down"></use>
+                      <use href="__spritemap#sprite-arrow-down"></use>
                     </svg>
                   </a>
                   <ul class="header__sub-list">
-                    <li class="header__sub-item header__sub-item--active">
-                      <a href="#" data-close-menu="close-menu">Общее</a>
+                    <li class="header__sub-item">
+                      <a
+                        class="header__nav-link"
+                        href="#"
+                        data-close-menu="close-menu"
+                        >Общее</a
+                      >
                     </li>
                     <li class="header__sub-item">
-                      <a href="#" data-close-menu="close-menu">Волонтёрство</a>
+                      <a
+                        class="header__nav-link"
+                        href="#"
+                        data-close-menu="close-menu"
+                        >Волонтёрство</a
+                      >
                     </li>
                     <li class="header__sub-item">
-                      <a href="#" data-close-menu="close-menu">Стажировки</a>
+                      <a
+                        class="header__nav-link"
+                        href="#"
+                        data-close-menu="close-menu"
+                        >Стажировки</a
+                      >
                     </li>
                     <li class="header__sub-item">
-                      <a href="#" data-close-menu="close-menu">Карьера</a>
+                      <a
+                        class="header__nav-link"
+                        href="#"
+                        data-close-menu="close-menu"
+                        >Карьера</a
+                      >
                     </li>
                     <li class="header__sub-item">
-                      <a href="#" data-close-menu="close-menu">Путешествия</a>
+                      <a
+                        class="header__nav-link"
+                        href="#"
+                        data-close-menu="close-menu"
+                        >Путешествия</a
+                      >
                     </li>
                   </ul>
                 </li>
                 <li class="header__nav-item">
-                  <a href="#contacts" data-close-menu="close-menu">
+                  <a
+                    class="header__nav-link"
+                    href="#contacts"
+                    data-close-menu="close-menu">
                     Контакты
                   </a>
                 </li>

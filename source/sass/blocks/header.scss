@@ -4,6 +4,15 @@
   width: 100%;
   min-height: 84px;
 
+  &--overlay.is-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 29, 51, 0.4);
+  }
+
   @include vp-767 {
     min-height: 74px;
   }
@@ -16,7 +25,69 @@
 }
 
 .header__nav-list {
+  list-style: none;
+  margin: 0;
   display: none;
+
+  .is-open & {
+    position: absolute;
+    top: 88px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 286px;
+    padding: 35px 25px;
+
+    background-color: $color-default-blue;
+    color: $color-default-white;
+  }
+}
+
+.header__nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  color: $color-default-white;
+  opacity: 0.7;
+
+  & svg {
+    transform: rotate(180deg);
+    stroke: $color-default-white;
+  }
+
+  &--open {
+    font-weight: 500;
+    opacity: 1;
+
+    & svg {
+      transform: unset;
+    }
+  }
+
+  &--close + .header__sub-list {
+    display: none;
+  }
+}
+
+.header__sub-list {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & .header__nav-link {
+    text-transform: unset;
+    opacity: 0.6;
+  }
 }
 
 .header__nav {
@@ -24,21 +95,110 @@
 }
 
 .header__burger {
+  position: relative;
+  display: inline-flex;
+  padding: 4px 70px 4px 30px;
+  justify-content: center;
+  align-items: center;
+
+  color: $color-default-blue;
   background-color: $color-default-white;
+  border: 1px solid $color-default-blue;
+  border-radius: 30px;
+  cursor: pointer;
+
+  transition: opacity 0.3s ease;
+
+  & svg {
+    stroke: $color-default-white;
+  }
+
+  .is-open & {
+    width: 286px;
+    justify-content: flex-start;
+    color: $color-default-white;
+    background-color: $color-default-blue;
+
+    & svg {
+      stroke: $color-default-blue;
+    }
+  }
+
+  &:disabled {
+    color: $color-disabled;
+    pointer-events: none;
+
+    & span:not(:first-child) {
+      background-color: $color-disabled;
+    }
+  }
+
+  @include hover-focus {
+    background-color: $color-default-blue;
+    color: $color-default-white;
+    pointer-events: none;
+
+    & span:not(:first-child) {
+      background-color: $color-default-white;
+    }
+
+    & svg {
+      stroke: $color-default-blue;
+    }
+  }
+
+  @include active {
+    background-color: $color-default-blue;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+
+    & span:not(:first-child) {
+      background-color: $color-default-white;
+    }
+
+    & svg {
+      stroke: rgba(49, 109, 194, 0.7);
+    }
+  }
+}
+
+.header__burger-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  text-transform: uppercase;
 }
 
 .header__burger-icon {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+
   display: flex;
   align-items: center;
   justify-content: center;
   width: 46px;
   height: 46px;
+
+  opacity: 1;
   color: $color-default-white;
   background-color: $color-default-blue;
   border-radius: 50%;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  cursor: pointer;
 
   &--close {
+    top: 50%;
+    opacity: 0;
     background-color: $color-default-white;
-    display: none;
+
+    .is-open & {
+      opacity: 1;
+      pointer-events: all;
+      transition: opacity 0.3s ease 0.2s;
+    }
   }
 }
