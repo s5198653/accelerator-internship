@@ -1,0 +1,44 @@
+.header {
+  position: absolute;
+  z-index: 30;
+  width: 100%;
+  min-height: 84px;
+
+  @include vp-767 {
+    min-height: 74px;
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.header__nav-list {
+  display: none;
+}
+
+.header__nav {
+  display: flex;
+}
+
+.header__burger {
+  background-color: $color-default-white;
+}
+
+.header__burger-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  color: $color-default-white;
+  background-color: $color-default-blue;
+  border-radius: 50%;
+
+  &--close {
+    background-color: $color-default-white;
+    display: none;
+  }
+}
