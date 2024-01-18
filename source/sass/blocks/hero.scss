@@ -32,12 +32,12 @@
 
   @include vp-1439 {
     min-height: 1024px;
-    padding: 680px 45px 60px;
+    padding: 670px 45px 60px;
   }
 
   @include vp-767 {
     min-height: 568px;
-    padding: 225px 15px 20px;
+    padding: 231px 15px 20px;
   }
 }
 
@@ -45,7 +45,7 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 968px;
-  min-height: 321px;
+  margin-bottom: auto;
 
   @include vp-1439 {
     max-width: 659px;
@@ -103,6 +103,7 @@
 .hero__slide-content h2 {
   margin: 0;
   padding: 40px 50px 30px;
+  min-height: 194px;
 
   font-size: 54px;
   font-style: normal;
@@ -114,14 +115,16 @@
   border-radius: 0 30px 30px 0;
 
   @include vp-1439 {
-    padding: 30px 40px 24px;
+    min-height: 142px;
+    padding: 30px 40px 14px;
 
     font-size: 36px;
     line-height: 44px;
   }
 
   @include vp-767 {
-    padding: 20px 14px 16px;
+    min-height: 114px;
+    padding: 19px 14px 11px;
 
     font-size: 22px;
     line-height: 26px;
@@ -132,6 +135,7 @@
 
 .hero__slide-content p {
   max-width: 496px;
+  min-height: 99px;
   margin: 0;
   padding: 0 0 35px 50px;
 
@@ -145,13 +149,16 @@
 
   @include vp-1439 {
     max-width: 325px;
+    min-height: 131px;
+    padding: 0 0 25px 40px;
 
     line-height: 20px;
   }
 
   @include vp-767 {
     max-width: 267px;
-    padding: 0 14px 15px;
+    min-height: 105px;
+    padding: 0 14px 11px;
 
     font-size: 14px;
 
@@ -171,7 +178,7 @@
   @include vp-767 {
     max-width: 182px;
     border-radius: 0px 0px 14px 14px;
-    padding: 10px 15px;
+    padding: 9px 15px;
   }
 }
 
@@ -210,12 +217,12 @@
   background-color: $color-default-white;
 
   @include vp-1439 {
-    top: 680px;
+    top: 653px;
     left: 45px;
   }
 
   @include vp-767 {
-    top: 220px;
+    top: 213px;
     left: 15px;
     width: 80px;
     height: 28px;

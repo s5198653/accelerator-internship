@@ -1,8 +1,7 @@
 .header {
-  position: absolute;
+  margin-bottom: -84px;
   z-index: 30;
   width: 100%;
-  min-height: 84px;
 
   &--sticky {
     position: fixed;
@@ -16,7 +15,7 @@
   }
 
   @include vp-767 {
-    min-height: 74px;
+    margin-bottom: -74px;
   }
 }
 
@@ -24,9 +23,15 @@
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
+
+  @include vp-767 {
+    padding-top: 20px;
+  }
 }
 
 .header__overlay {
+  display: none;
+
   .is-open & {
     position: fixed;
     top: 0;
@@ -129,9 +134,9 @@
 
 .header__burger {
   position: relative;
-  min-height: 54px;
+  height: 54px;
   display: inline-flex;
-  padding: 4px 70px 4px 30px;
+  padding: 2px 70px 2px 20px;
   justify-content: center;
   align-items: center;
 
