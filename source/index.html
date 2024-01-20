@@ -472,8 +472,11 @@
                   с которыми сталкиваются в мире. Цель центра — наделить этих
                   людей способностью инициировать значимые изменения.
                 </p>
-                <a class="about__button button" href="#">
-                  <span>подробнее о проекте</span>
+                <a
+                  class="about__button button"
+                  href="#"
+                  data-open-modal="feedback">
+                  <span>подробнее о проекте</span>
                   <span>
                     <svg width="10" height="10">
                       <use href="__spritemap#sprite-arrow"></use>
@@ -563,6 +566,96 @@
       </main>
       <footer data-test="footer">footer</footer>
     </div>
+
+    <div class="modal modal--preload" data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <button
+            class="modal__close-btn btn-reset"
+            type="button"
+            aria-label="Закрыть попап"
+            data-close-modal>
+            <svg width="18" height="18">
+              <use xlink:href="__spritemap#sprite-cross"></use>
+            </svg>
+          </button>
+          <h2 class="modal__title">Напишите нам</h2>
+          <p class="modal__description">
+            Оставьте ваши контакты, если у вас остались вопросы — мы на них
+            ответим!
+          </p>
+          <div data-form-validate data-callback="base" data-form="send">
+            <form
+              class="feedback__form"
+              action="https://echo.htmlacademy.ru/"
+              method="post">
+              <div
+                class="modal__field"
+                data-validate-type="text"
+                data-limitation="name"
+                data-message-base="Поле обязательно к заполнению"
+                data-message-extra="Проверьте корректность заполнения поля"
+                data-required>
+                <label>
+                  <span>Имя</span>
+                  <input type="text" name="name" required />
+                </label>
+              </div>
+              <div
+                class="modal__field phone-mask"
+                data-validate-type="phone"
+                data-on-input-validate
+                data-message-base="Поле обязательно к заполнению"
+                data-message-extra="Проверьте корректность заполнения поля"
+                data-message-success="Поле заполнено верно"
+                data-required>
+                <label>
+                  <span>Телефон</span>
+                  <input type="tel" name="phone" autocomplete="off" />
+                </label>
+              </div>
+              <div class="modal__field">
+                <span>Выберите город</span>
+                <select name="City">
+                  <span>
+                    <svg width="16" height="16">
+                      <use xlink:href="__spritemap#sprite-arrow-down"></use>
+                    </svg>
+                  </span>
+                  <option value=""></option>
+                  <option value="Saint-Petersburg">Санкт-Петербург</option>
+                </select>
+              </div>
+              <div class="modal__agreement">
+                <label>
+                  <input
+                    type="checkbox"
+                    name="agreement"
+                    autocomplete="off"
+                    required />
+                  <span>
+                    <svg width="15" height="15">
+                      <use xlink:href="__spritemap#sprite-check"></use>
+                    </svg>
+                  </span>
+                  <p>Я согласен на обработку моих персональных данных</p>
+                </label>
+              </div>
+              <button class="modal__button button" type="submit">
+                <span>Отправить</span>
+                <span>
+                  <svg width="10" height="10">
+                    <use href="__spritemap#sprite-arrow"></use>
+                  </svg>
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
