@@ -68,13 +68,13 @@
                 <li class="header__nav-item">
                   <a
                     class="header__nav-link"
-                    href="#"
+                    href="#about"
                     data-close-menu="close-menu"
                     >О проекте</a
                   >
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-link" href="#" data-sub-menu="sub-menu">
+                  <a class="header__nav-link" data-sub-menu="sub-menu">
                     <span>Программы</span>
                     <svg width="12" height="12">
                       <use href="__spritemap#sprite-arrow-down"></use>
@@ -84,7 +84,7 @@
                     <li class="header__sub-item">
                       <a
                         class="header__nav-link"
-                        href="#"
+                        href="#programs"
                         data-close-menu="close-menu"
                         >Стажировки</a
                       >
@@ -92,7 +92,7 @@
                     <li class="header__sub-item">
                       <a
                         class="header__nav-link"
-                        href="#"
+                        href="#programs"
                         data-close-menu="close-menu"
                         >Волонтёрство</a
                       >
@@ -100,7 +100,7 @@
                     <li class="header__sub-item">
                       <a
                         class="header__nav-link"
-                        href="#"
+                        href="#programs"
                         data-close-menu="close-menu"
                         >Учёба</a
                       >
@@ -108,7 +108,7 @@
                     <li class="header__sub-item">
                       <a
                         class="header__nav-link"
-                        href="#"
+                        href="#programs"
                         data-close-menu="close-menu"
                         >Религия</a
                       >
@@ -126,13 +126,13 @@
                 <li class="header__nav-item">
                   <a
                     class="header__nav-link"
-                    href="#"
+                    href="#reviews"
                     data-close-menu="close-menu"
                     >Отзывы</a
                   >
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-link" href="#" data-sub-menu="sub-menu">
+                  <a class="header__nav-link" data-sub-menu="sub-menu">
                     <span>Новости</span>
                     <svg width="12" height="12">
                       <use href="__spritemap#sprite-arrow-down"></use>
@@ -142,7 +142,7 @@
                     <li class="header__sub-item">
                       <a
                         class="header__nav-link"
-                        href="#"
+                        href="#news"
                         data-close-menu="close-menu"
                         >Общее</a
                       >
@@ -150,7 +150,7 @@
                     <li class="header__sub-item">
                       <a
                         class="header__nav-link"
-                        href="#"
+                        href="#news"
                         data-close-menu="close-menu"
                         >Волонтёрство</a
                       >
@@ -158,7 +158,7 @@
                     <li class="header__sub-item">
                       <a
                         class="header__nav-link"
-                        href="#"
+                        href="#news"
                         data-close-menu="close-menu"
                         >Стажировки</a
                       >
@@ -166,7 +166,7 @@
                     <li class="header__sub-item">
                       <a
                         class="header__nav-link"
-                        href="#"
+                        href="#news"
                         data-close-menu="close-menu"
                         >Карьера</a
                       >
@@ -174,7 +174,7 @@
                     <li class="header__sub-item">
                       <a
                         class="header__nav-link"
-                        href="#"
+                        href="#news"
                         data-close-menu="close-menu"
                         >Путешествия</a
                       >
@@ -453,7 +453,7 @@
         </section>
       </div>
       <main>
-        <section class="about" data-test="about">
+        <section class="about" id="about" data-test="about">
           <div class="about__container container">
             <div class="about__text-wrapper">
               <div class="about__description-wrapper">
@@ -556,13 +556,312 @@
           </div>
         </section>
 
-        <div data-test="programs">programs</div>
-        <div data-test="grant">grant</div>
-        <div data-test="news">news</div>
-        <div data-test="FAQ">FAQ</div>
-        <div data-test="reviews">reviews</div>
-        <div data-test="contacts">contacts</div>
-        <div data-test="form">form</div>
+        <section id="programs" data-test="programs">
+          <div class="programs__container container">
+            <div class="programs__swiper swiper" data-swiper="programs-swiper">
+              <div class="programs__text-wrapper">
+                <h2>Программы</h2>
+                <a class="programs__button button" href="#">
+                  <span>все программы</span>
+                  <span>
+                    <svg width="10" height="10">
+                      <use href="__spritemap#sprite-arrow"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <ul class="programs__list swiper-wrapper">
+                <!-- Slides -->
+                <li class="programs__slide swiper-slide">
+                  <div class="programs__slide-content">
+                    <h2>Стажировки</h2>
+                    <span class="programs__angle">
+                      <svg width="18" height="18">
+                        <use href="__spritemap#sprite-angle"></use>
+                      </svg>
+                    </span>
+                    <div class="programs__slide-wrapper">
+                      <p>
+                        Получите незаменимый опыт работы в крупнейших мировых
+                        компаниях.
+                      </p>
+                      <a class="programs__slide-button" href="#">
+                        <span>
+                          <svg width="10" height="10">
+                            <use href="__spritemap#sprite-arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="programs__slide-image">
+                    <picture>
+                      <source
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                        srcset="
+                          img/programs/slide-1-mobile@1x.webp 1x,
+                          img/programs/slide-1-mobile@2x.webp 2x
+                        " />
+                      <source
+                        media="(max-width: 1439px)"
+                        type="image/webp"
+                        srcset="
+                          img/programs/slide-1-tablet@1x.webp 1x,
+                          img/programs/slide-1-tablet@2x.webp 2x
+                        " />
+                      <source
+                        type="image/webp"
+                        srcset="
+                          img/programs/slide-1-desktop@1x.webp 1x,
+                          img/programs/slide-1-desktop@2x.webp 2x
+                        " />
+                      <source
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                        srcset="
+                          img/programs/slide-1-mobile@1x.jpg 1x,
+                          img/programs/slide-1-mobile@2x.jpg 2x
+                        " />
+                      <source
+                        media="(max-width: 1439px)"
+                        type="image/jpg"
+                        srcset="
+                          img/programs/slide-1-tablet@1x.jpg 1x,
+                          img/programs/slide-1-tablet@2x.jpg 2x
+                        " />
+                      <img
+                        src="img/programs/slide-1-desktop@1x.jpg"
+                        srcset="img/programs/slide-1-desktop@2x.jpg"
+                        alt=""
+                        width="392"
+                        height="420" />
+                    </picture>
+                  </div>
+                </li>
+                <li class="programs__slide swiper-slide">
+                  <div class="programs__slide-content">
+                    <h2>Волонтёрство</h2>
+                    <span class="programs__angle">
+                      <svg width="18" height="18">
+                        <use href="__spritemap#sprite-angle"></use>
+                      </svg>
+                    </span>
+                    <div class="programs__slide-wrapper">
+                      <p>
+                        Помогайте другим и развивайте свои лидерские качества.
+                      </p>
+                      <a class="programs__slide-button" href="#">
+                        <span>
+                          <svg width="10" height="10">
+                            <use href="__spritemap#sprite-arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="programs__slide-image">
+                    <picture>
+                      <source
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                        srcset="
+                          img/programs/slide-2-mobile@1x.webp 1x,
+                          img/programs/slide-2-mobile@2x.webp 2x
+                        " />
+                      <source
+                        media="(max-width: 1439px)"
+                        type="image/webp"
+                        srcset="
+                          img/programs/slide-2-tablet@1x.webp 1x,
+                          img/programs/slide-2-tablet@2x.webp 2x
+                        " />
+                      <source
+                        type="image/webp"
+                        srcset="
+                          img/programs/slide-2-desktop@1x.webp 1x,
+                          img/programs/slide-2-desktop@2x.webp 2x
+                        " />
+                      <source
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                        srcset="
+                          img/programs/slide-2-mobile@1x.jpg 1x,
+                          img/programs/slide-2-mobile@2x.jpg 2x
+                        " />
+                      <source
+                        media="(max-width: 1439px)"
+                        type="image/jpg"
+                        srcset="
+                          img/programs/slide-2-tablet@1x.jpg 1x,
+                          img/programs/slide-2-tablet@2x.jpg 2x
+                        " />
+                      <img
+                        src="img/programs/slide-2-desktop@1x.jpg"
+                        srcset="img/programs/slide-2-desktop@2x.jpg"
+                        alt=""
+                        width="392"
+                        height="420" />
+                    </picture>
+                  </div>
+                </li>
+                <li class="programs__slide swiper-slide">
+                  <div class="programs__slide-content">
+                    <h2>Учёба</h2>
+                    <span class="programs__angle">
+                      <svg width="18" height="18">
+                        <use href="__spritemap#sprite-angle"></use>
+                      </svg>
+                    </span>
+                    <div class="programs__slide-wrapper">
+                      <p>Получите образование и измените своё будущее.</p>
+                      <a class="programs__slide-button" href="#">
+                        <span>
+                          <svg width="10" height="10">
+                            <use href="__spritemap#sprite-arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="programs__slide-image">
+                    <picture>
+                      <source
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                        srcset="
+                          img/programs/slide-3-mobile@1x.webp 1x,
+                          img/programs/slide-3-mobile@2x.webp 2x
+                        " />
+                      <source
+                        media="(max-width: 1439px)"
+                        type="image/webp"
+                        srcset="
+                          img/programs/slide-3-tablet@1x.webp 1x,
+                          img/programs/slide-3-tablet@2x.webp 2x
+                        " />
+                      <source
+                        type="image/webp"
+                        srcset="
+                          img/programs/slide-3-desktop@1x.webp 1x,
+                          img/programs/slide-3-desktop@2x.webp 2x
+                        " />
+                      <source
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                        srcset="
+                          img/programs/slide-3-mobile@1x.jpg 1x,
+                          img/programs/slide-3-mobile@2x.jpg 2x
+                        " />
+                      <source
+                        media="(max-width: 1439px)"
+                        type="image/jpg"
+                        srcset="
+                          img/programs/slide-3-tablet@1x.jpg 1x,
+                          img/programs/slide-3-tablet@2x.jpg 2x
+                        " />
+                      <img
+                        src="img/programs/slide-3-desktop@1x.jpg"
+                        srcset="img/programs/slide-3-desktop@2x.jpg"
+                        alt=""
+                        width="392"
+                        height="420" />
+                    </picture>
+                  </div>
+                </li>
+                <li class="programs__slide swiper-slide">
+                  <div class="programs__slide-content">
+                    <h2>Волонтёрство</h2>
+                    <span class="programs__angle">
+                      <svg width="18" height="18">
+                        <use href="__spritemap#sprite-angle"></use>
+                      </svg>
+                    </span>
+                    <div class="programs__slide-wrapper">
+                      <p>
+                        Помогайте другим и развивайте свои лидерские качества.
+                      </p>
+                      <a class="programs__slide-button" href="#">
+                        <span>
+                          <svg width="10" height="10">
+                            <use href="__spritemap#sprite-arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="programs__slide-image">
+                    <picture>
+                      <source
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                        srcset="
+                          img/programs/slide-2-mobile@1x.webp 1x,
+                          img/programs/slide-2-mobile@2x.webp 2x
+                        " />
+                      <source
+                        media="(max-width: 1439px)"
+                        type="image/webp"
+                        srcset="
+                          img/programs/slide-2-tablet@1x.webp 1x,
+                          img/programs/slide-2-tablet@2x.webp 2x
+                        " />
+                      <source
+                        type="image/webp"
+                        srcset="
+                          img/programs/slide-2-desktop@1x.webp 1x,
+                          img/programs/slide-2-desktop@2x.webp 2x
+                        " />
+                      <source
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                        srcset="
+                          img/programs/slide-2-mobile@1x.jpg 1x,
+                          img/programs/slide-2-mobile@2x.jpg 2x
+                        " />
+                      <source
+                        media="(max-width: 1439px)"
+                        type="image/jpg"
+                        srcset="
+                          img/programs/slide-2-tablet@1x.jpg 1x,
+                          img/programs/slide-2-tablet@2x.jpg 2x
+                        " />
+                      <img
+                        src="img/programs/slide-2-desktop@1x.jpg"
+                        srcset="img/programs/slide-2-desktop@2x.jpg"
+                        alt=""
+                        width="392"
+                        height="420" />
+                    </picture>
+                  </div>
+                </li>
+              </ul>
+              <div class="programs__swiper-button-wrapper">
+                <div
+                  class="programs__swiper-button programs__swiper-button--prev swiper-button swiper-button-prev"
+                  data-button="programs-prev">
+                  <svg width="10" height="10">
+                    <use href="__spritemap#sprite-arrow-swiper"></use>
+                  </svg>
+                </div>
+                <div
+                  class="programs__swiper-button programs__swiper-button--next swiper-button swiper-button-next"
+                  data-button="programs-next">
+                  <svg width="10" height="10">
+                    <use href="__spritemap#sprite-arrow-swiper"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="programs__swiper-pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+        <section id="about" data-test="grant">grant</section>
+        <section id="news" data-test="news">news</section>
+        <section id="FAQ" data-test="FAQ">FAQ</section>
+        <section id="reviews" data-test="reviews">reviews</section>
+        <section id="contacts" data-test="contacts">contacts</section>
+        <section id="form" data-test="form">form</section>
       </main>
       <footer data-test="footer">footer</footer>
     </div>
