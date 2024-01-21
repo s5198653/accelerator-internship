@@ -933,13 +933,78 @@
             </ul>
           </div>
         </section>
-        <section id="news" data-test="news">news</section>
-        <section id="FAQ" data-test="FAQ">FAQ</section>
-        <section id="reviews" data-test="reviews">reviews</section>
-        <section id="contacts" data-test="contacts">contacts</section>
-        <section id="form" data-test="form">form</section>
+        <section class="news" id="news" data-test="news">news</section>
+        <section class="FAQ" id="FAQ" data-test="FAQ">FAQ</section>
+        <section class="reviews" id="reviews" data-test="reviews">
+          reviews
+        </section>
+        <section class="contacts" id="contacts" data-test="contacts">
+          <div class="contacts__text-wrapper">
+            <h2>Контакты</h2>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <h3>центральный офис</h3>
+                <p>г. Новосибирск, ул. Щетинкина 68, культурный центр</p>
+              </li>
+              <li class="contacts__item">
+                <h3>Телефон:</h3>
+                <a href="tel:+796387687676">+7 963 876 876 76</a>
+              </li>
+              <li class="contacts__item">
+                <h3>Email:</h3>
+                <a href="mailto:Info@stazh.ru">Info@stazh.ru</a>
+              </li>
+          </div>
+
+            <div class="contacts__image">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                  srcset="
+                    img/contacts/map-mobile@1x.webp 1x,
+                    img/contacts/map-mobile@2x.webp 2x
+                  " />
+                <source
+                  media="(max-width: 1439px)"
+                  type="image/webp"
+                  srcset="
+                    img/contacts/map-tablet@1x.webp 1x,
+                    img/contacts/map-tablet@2x.webp 2x
+                  " />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/contacts/map-desktop@1x.webp 1x,
+                    img/contacts/map-desktop@2x.webp 2x
+                  " />
+                <source
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                  srcset="
+                    img/contacts/map-mobile@1x.jpg 1x,
+                    img/contacts/map-mobile@2x.jpg 2x
+                  " />
+                <source
+                  media="(max-width: 1439px)"
+                  type="image/jpg"
+                  srcset="
+                    img/contacts/map-tablet@1x.jpg 1x,
+                    img/contacts/map-tablet@2x.jpg 2x
+                  " />
+                <img
+                  src="img/contacts/map-desktop@1x.jpg"
+                  srcset="img/contacts/map-desktop@2x.jpg"
+                  alt=""
+                  width="1240"
+                  height="500" />
+              </picture>
+            </div>
+          </ul>
+        </section>
+        <section class="form" id="form" data-test="form">form</section>
       </main>
-      <footer data-test="footer">footer</footer>
+      <footer class="footer" data-test="footer">footer</footer>
     </div>
 
     <div class="modal modal--preload" data-modal="feedback">

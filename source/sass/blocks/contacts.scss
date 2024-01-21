@@ -1,0 +1,163 @@
+.contacts {
+  margin-top: 120px;
+  padding: 120px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  color: $color-default-white;
+  background-color: $color-default-blue;
+
+  @include vp-1439 {
+    margin-top: 100px;
+    padding: 100px 45px;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    margin-top: 60px;
+    padding: 70px 15px;
+  }
+}
+
+.contacts__text-wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 27px;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    opacity: 0.2;
+    background-color: $color-default-white;
+  }
+
+  @include vp-1439 {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    padding-bottom: 24px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 16px;
+  }
+}
+
+.contacts h2 {
+  margin: 0;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+
+  @include vp-1439 {
+    font-size: 34px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.contacts__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 604px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include vp-1439 {
+    max-width: 678px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &:first-child {
+    max-width: 263px;
+  }
+
+  @include vp-767 {
+    gap: 8px;
+
+    &:first-child {
+      max-width: 230px;
+    }
+  }
+}
+
+.contacts__item h3 {
+  margin: 0;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.contacts__item p {
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+
+  @include vp-1439 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.contacts__item a {
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: $color-default-white;
+
+  @include vp-1439 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+
+  @include hover-focus {
+    border-bottom: 1px solid;
+  }
+
+  @include active {
+    opacity: 0.8;
+    border-bottom: unset;
+  }
+}
+
+.contacts__image img {
+  border-radius: 16px;
+}
