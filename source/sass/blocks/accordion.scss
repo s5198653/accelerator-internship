@@ -1,0 +1,205 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  max-width: 1028px;
+  gap: 10px;
+
+  @include vp-1439 {
+    max-width: 678px;
+  }
+
+  @include vp-767 {
+    max-width: 290px;
+  }
+}
+
+.accordion__element {
+  border-radius: 16px;
+  border: 1px solid $color-default-blue;
+
+  &.is-active {
+    background-color: $color-default-blue;
+    color: $color-default-alabaster;
+
+    @include active {
+      background-color: $color-active;
+    }
+  }
+
+  @include vp-767 {
+    border-radius: 14px;
+  }
+}
+
+.accordion__button {
+  position: relative;
+  padding: 41px 39px 37px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  border-radius: 16px;
+  border: none;
+  background-color: $color-transparent;
+
+  cursor: pointer;
+
+  &--wide {
+    padding: 33px 39px 30px;
+  }
+
+  &::after {
+    position: absolute;
+    right: 39px;
+    content: '+';
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: $color-default-white;
+    background-color: $color-default-blue;
+    border-radius: 30px;
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+
+    &::after {
+      background-color: $color-default-white;
+      border: 1px solid $color-default-blue;
+      color: $color-default-blue;
+    }
+  }
+
+  @include active {
+    color: $color-active;
+
+    &::after {
+      background-color: $color-active;
+      color: $color-default-white;
+    }
+  }
+
+  @include vp-1439 {
+    padding: 30px 29px 28px;
+
+    &::after {
+      right: 29px;
+    }
+
+    &--wide {
+      padding: 24px 29px;
+    }
+  }
+
+  @include vp-767 {
+    padding: 20px 14px 18px;
+    border-radius: 14px;
+
+    &::after {
+      right: 14px;
+    }
+
+    &--wide {
+      padding: 20px 14px 18px;
+    }
+  }
+}
+
+.accordion__button span {
+  max-width: 700px;
+  min-height: 40px;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: start;
+  color: $color-default-blue;
+
+  @include vp-1439 {
+    max-width: 500px;
+    padding-top: 5px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @include vp-767 {
+    padding-top: 1px;
+    max-width: 190px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.accordion__button--wide span {
+  @include vp-1439 {
+    padding-top: 0;
+  }
+}
+
+.accordion__element.is-active .accordion__button {
+  padding-bottom: 10px;
+
+  & span {
+    color: $color-default-alabaster;
+  }
+
+  &::after {
+    content: '-';
+    padding-bottom: 4px;
+    font-size: 36px;
+    color: $color-default-blue;
+    background-color: $color-default-white;
+    border-color: $color-default-white;
+  }
+
+  @include hover-focus {
+    background-color: $color-default-blue;
+
+    &::after {
+      color: $color-default-white;
+      background-color: $color-transparent;
+      border: 1px solid $color-default-white;
+    }
+  }
+
+  @include active {
+    background-color: $color-active;
+
+    &::after {
+      color: $color-active;
+      background-color: $color-default-white;
+      border: 1px solid $color-default-white;
+    }
+  }
+
+  @include vp-1439 {
+    padding-bottom: 15px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 13px;
+  }
+}
+
+.accordion__wrapper p {
+  padding: 0 310px 35px 40px;
+  margin: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  color: $color-default-alabaster;
+
+  @include vp-1439 {
+    padding: 0 70px 25px 30px;
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    padding: 0 19px 15px 14px;
+    font-size: 14px;
+  }
+}
