@@ -66,27 +66,12 @@
   flex-direction: column;
   gap: 44px;
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    opacity: 0.2;
-    background: $color-default-blue;
-  }
-
   @include vp-1439 {
     gap: 38px;
   }
 
   @include vp-767 {
     gap: 30px;
-
-    &::after {
-      content: none;
-    }
   }
 }
 
@@ -113,16 +98,6 @@
 
   border-radius: 12px;
 
-  &.swiper-slide-active::after {
-    content: '';
-    position: absolute;
-    bottom: -51px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: $color-default-blue;
-  }
-
   @include vp-1439 {
     width: 324px;
   }
@@ -130,14 +105,10 @@
   @include vp-767 {
     width: 320px;
     min-height: 405px;
-
-    &.swiper-slide-active::after {
-      content: none;
-    }
   }
 }
 
-.programs__slide .programs__slide-content {
+.programs__slide-content {
   position: relative;
   z-index: 1;
 
@@ -163,6 +134,10 @@
   margin-top: auto;
   width: 18px;
   height: 18px;
+
+  & svg {
+    fill: $color-default-white;
+  }
 }
 
 .programs__slide-content h2 {
@@ -287,7 +262,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 55;
 
   width: 106px;
   height: 22px;
@@ -298,6 +273,7 @@
   }
 
   @include vp-767 {
+    top: 15px;
     width: 52px;
   }
 }
@@ -358,11 +334,26 @@
     }
   }
 
-  @include vp-1439 {
+  @include vp-767 {
     right: 32px;
 
     &--next {
       right: 0;
     }
   }
+}
+
+.programs__swiper-scrollbar.swiper-scrollbar {
+  bottom: 11px;
+  height: 2px;
+  background-color: rgba(49, 109, 194, 0.2);
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.programs__swiper .swiper-scrollbar-drag {
+  background-color: $color-default-blue;
+  opacity: 1;
 }

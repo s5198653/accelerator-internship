@@ -1,13 +1,22 @@
 import Swiper from 'swiper';
-import {Navigation} from 'swiper/modules';
+import {Navigation, Scrollbar, Keyboard} from 'swiper/modules';
 
 const initProgramsSwiper = () =>
   new Swiper('[data-swiper="programs-swiper"]', {
-    modules: [Navigation],
+    modules: [Navigation, Scrollbar, Keyboard],
     direction: 'horizontal',
     navigation: {
       nextEl: '[data-button="programs-next"]',
       prevEl: '[data-button="programs-prev"]',
+    },
+    scrollbar: {
+      el: '.programs__swiper-scrollbar',
+      hide: false,
+      dragSize: 392,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
     },
     breakpoints: {
       1440: {
@@ -19,6 +28,9 @@ const initProgramsSwiper = () =>
         slidesPerView: 'auto',
         spaceBetween: 30,
         allowTouchMove: true,
+        scrollbar: {
+          dragSize: 324,
+        },
       },
       320: {
         slidesPerView: 1,
