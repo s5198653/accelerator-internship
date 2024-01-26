@@ -203,6 +203,8 @@
               <li class="hero__slide swiper-slide">
                 <div class="hero__slide-content">
                   <div class="hero__slide-content-wrapper">
+                    <div
+                      class="hero__swiper-pagination swiper-pagination swiper-pagination-bullets"></div>
                     <span class="hero__angle hero__angle--top">
                       <svg width="20" height="20">
                         <use href="__spritemap#sprite-angle"></use>
@@ -286,6 +288,8 @@
               <li class="hero__slide swiper-slide">
                 <div class="hero__slide-content">
                   <div class="hero__slide-content-wrapper">
+                    <div
+                      class="hero__swiper-pagination swiper-pagination swiper-pagination-bullets"></div>
                     <span class="hero__angle hero__angle--top">
                       <svg width="20" height="20">
                         <use href="__spritemap#sprite-angle"></use>
@@ -368,6 +372,8 @@
               <li class="hero__slide swiper-slide">
                 <div class="hero__slide-content">
                   <div class="hero__slide-content-wrapper">
+                    <div
+                      class="hero__swiper-pagination swiper-pagination"></div>
                     <span class="hero__angle hero__angle--top">
                       <svg width="20" height="20">
                         <use href="__spritemap#sprite-angle"></use>
@@ -446,9 +452,6 @@
                 </div>
               </li>
             </ul>
-
-            <div
-              class="hero__swiper-pagination swiper-pagination swiper-pagination-bullets"></div>
           </div>
         </section>
       </div>
@@ -837,14 +840,16 @@
               <div class="programs__swiper-button-wrapper">
                 <div
                   class="programs__swiper-button programs__swiper-button--prev swiper-button swiper-button-prev"
-                  data-button="programs-prev">
+                  data-button="programs-prev"
+                  tabindex="0">
                   <svg width="10" height="10">
                     <use href="__spritemap#sprite-arrow-swiper"></use>
                   </svg>
                 </div>
                 <div
                   class="programs__swiper-button programs__swiper-button--next swiper-button swiper-button-next"
-                  data-button="programs-next">
+                  data-button="programs-next"
+                  tabindex="0">
                   <svg width="10" height="10">
                     <use href="__spritemap#sprite-arrow-swiper"></use>
                   </svg>
@@ -856,80 +861,82 @@
         </section>
 
         <section class="grant" id="grant" data-test="grant">
-          <div class="grant__text-wrapper">
-            <h2>Как поехать</h2>
-            <p>
-              Свяжитесь с координатором, чтобы узнать полную информацию. Вы
-              получите актуальные сведения о доступных программах
-              и&nbsp;городах, в которых можете пройти программу.
-            </p>
-            <div class="grant__image">
-              <picture>
-                <source
-                  media="(max-width: 767px)"
-                  type="image/webp"
-                  srcset="
-                    img/grant/photo-mobile@1x.webp 1x,
-                    img/grant/photo-mobile@2x.webp 2x
-                  " />
-                <source
-                  media="(max-width: 1439px)"
-                  type="image/webp"
-                  srcset="
-                    img/grant/photo-tablet@1x.webp 1x,
-                    img/grant/photo-tablet@2x.webp 2x
-                  " />
-                <source
-                  type="image/webp"
-                  srcset="
-                    img/grant/photo-desktop@1x.webp 1x,
-                    img/grant/photo-desktop@2x.webp 2x
-                  " />
-                <source
-                  media="(max-width: 767px)"
-                  type="image/jpg"
-                  srcset="
-                    img/grant/photo-mobile@1x.jpg 1x,
-                    img/grant/photo-mobile@2x.jpg 2x
-                  " />
-                <source
-                  media="(max-width: 1439px)"
-                  type="image/jpg"
-                  srcset="
-                    img/grant/photo-tablet@1x.jpg 1x,
-                    img/grant/photo-tablet@2x.jpg 2x
-                  " />
-                <img
-                  src="img/grant/photo-desktop@1x.jpg"
-                  srcset="img/grant/photo-desktop@2x.jpg"
-                  alt=""
-                  width="498"
-                  height="363" />
-              </picture>
+          <div class="grant__container container">
+            <div class="grant__text-wrapper">
+              <h2>Как поехать</h2>
+              <p>
+                Свяжитесь с координатором, чтобы узнать полную информацию. Вы
+                получите актуальные сведения о доступных программах
+                и&nbsp;городах, в которых можете пройти программу.
+              </p>
+              <div class="grant__image">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                    srcset="
+                      img/grant/photo-mobile@1x.webp 1x,
+                      img/grant/photo-mobile@2x.webp 2x
+                    " />
+                  <source
+                    media="(max-width: 1439px)"
+                    type="image/webp"
+                    srcset="
+                      img/grant/photo-tablet@1x.webp 1x,
+                      img/grant/photo-tablet@2x.webp 2x
+                    " />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      img/grant/photo-desktop@1x.webp 1x,
+                      img/grant/photo-desktop@2x.webp 2x
+                    " />
+                  <source
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                    srcset="
+                      img/grant/photo-mobile@1x.jpg 1x,
+                      img/grant/photo-mobile@2x.jpg 2x
+                    " />
+                  <source
+                    media="(max-width: 1439px)"
+                    type="image/jpg"
+                    srcset="
+                      img/grant/photo-tablet@1x.jpg 1x,
+                      img/grant/photo-tablet@2x.jpg 2x
+                    " />
+                  <img
+                    src="img/grant/photo-desktop@1x.jpg"
+                    srcset="img/grant/photo-desktop@2x.jpg"
+                    alt=""
+                    width="498"
+                    height="363" />
+                </picture>
+              </div>
             </div>
-          </div>
-          <div class="grant__requirements">
-            <h3>Чтобы получить грант на&nbsp;обучение, вам нужно:</h3>
-            <ul class="grant__list">
-              <li class="grant__item">
-                <p>Быть в возрасте от 16 до 30 лет</p>
-              </li>
-              <li class="grant__item">
-                <p>Иметь оконченное среднее образование</p>
-              </li>
-              <li class="grant__item">
-                <p>
-                  Иметь документально подтверждённое отсутствие судимости и
-                  пройти консульскую проверку
-                </p>
-              </li>
-              <li class="grant__item">
-                <p>
-                  За последние 2 года быть не&nbsp;больше 3х месяцев подряд
-                  непрерывно в одной стране
-                </p>
-              </li>
-            </ul>
+            <div class="grant__requirements">
+              <h3>Чтобы получить грант на&nbsp;обучение, вам нужно:</h3>
+              <ul class="grant__list">
+                <li class="grant__item">
+                  <p>Быть в возрасте от 16 до 30 лет</p>
+                </li>
+                <li class="grant__item">
+                  <p>Иметь оконченное среднее образование</p>
+                </li>
+                <li class="grant__item">
+                  <p>
+                    Иметь документально подтверждённое отсутствие судимости и
+                    пройти консульскую проверку
+                  </p>
+                </li>
+                <li class="grant__item">
+                  <p>
+                    За последние 2 года быть не&nbsp;больше 3х месяцев подряд
+                    непрерывно в одной стране
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -1927,70 +1934,235 @@
         </section>
 
         <section class="contacts" id="contacts" data-test="contacts">
-          <div class="contacts__text-wrapper">
-            <h2>Контакты</h2>
-            <ul class="contacts__list">
-              <li class="contacts__item">
-                <h3>центральный офис</h3>
-                <p>г. Новосибирск, ул. Щетинкина 68, культурный центр</p>
-              </li>
-              <li class="contacts__item">
-                <h3>Телефон:</h3>
-                <a href="tel:+796387687676">+7 963 876 876 76</a>
-              </li>
-              <li class="contacts__item">
-                <h3>Email:</h3>
-                <a href="mailto:Info@stazh.ru">Info@stazh.ru</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="contacts__image">
-            <picture>
-              <source
-                media="(max-width: 767px)"
-                type="image/webp"
-                srcset="
-                  img/contacts/map-mobile@1x.webp 1x,
-                  img/contacts/map-mobile@2x.webp 2x
-                " />
-              <source
-                media="(max-width: 1439px)"
-                type="image/webp"
-                srcset="
-                  img/contacts/map-tablet@1x.webp 1x,
-                  img/contacts/map-tablet@2x.webp 2x
-                " />
-              <source
-                type="image/webp"
-                srcset="
-                  img/contacts/map-desktop@1x.webp 1x,
-                  img/contacts/map-desktop@2x.webp 2x
-                " />
-              <source
-                media="(max-width: 767px)"
-                type="image/jpg"
-                srcset="
-                  img/contacts/map-mobile@1x.jpg 1x,
-                  img/contacts/map-mobile@2x.jpg 2x
-                " />
-              <source
-                media="(max-width: 1439px)"
-                type="image/jpg"
-                srcset="
-                  img/contacts/map-tablet@1x.jpg 1x,
-                  img/contacts/map-tablet@2x.jpg 2x
-                " />
-              <img
-                src="img/contacts/map-desktop@1x.jpg"
-                srcset="img/contacts/map-desktop@2x.jpg"
-                alt=""
-                width="1240"
-                height="500" />
-            </picture>
+          <div class="contacts__container container">
+            <div class="contacts__text-wrapper">
+              <h2>Контакты</h2>
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <h3>центральный офис</h3>
+                  <p>г. Новосибирск, ул. Щетинкина 68, культурный центр</p>
+                </li>
+                <li class="contacts__item">
+                  <h3>Телефон:</h3>
+                  <a href="tel:+796387687676">+7 963 876 876 76</a>
+                </li>
+                <li class="contacts__item">
+                  <h3>Email:</h3>
+                  <a href="mailto:Info@stazh.ru">Info@stazh.ru</a>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__image">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                  srcset="
+                    img/contacts/map-mobile@1x.webp 1x,
+                    img/contacts/map-mobile@2x.webp 2x
+                  " />
+                <source
+                  media="(max-width: 1439px)"
+                  type="image/webp"
+                  srcset="
+                    img/contacts/map-tablet@1x.webp 1x,
+                    img/contacts/map-tablet@2x.webp 2x
+                  " />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/contacts/map-desktop@1x.webp 1x,
+                    img/contacts/map-desktop@2x.webp 2x
+                  " />
+                <source
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                  srcset="
+                    img/contacts/map-mobile@1x.jpg 1x,
+                    img/contacts/map-mobile@2x.jpg 2x
+                  " />
+                <source
+                  media="(max-width: 1439px)"
+                  type="image/jpg"
+                  srcset="
+                    img/contacts/map-tablet@1x.jpg 1x,
+                    img/contacts/map-tablet@2x.jpg 2x
+                  " />
+                <img
+                  src="img/contacts/map-desktop@1x.jpg"
+                  srcset="img/contacts/map-desktop@2x.jpg"
+                  alt=""
+                  width="1240"
+                  height="500" />
+              </picture>
+            </div>
           </div>
         </section>
-        <section class="form" id="form" data-test="form">form</section>
+
+        <section class="form" id="form" data-test="form">
+          <div class="form__container container">
+            <div class="form__slide-image">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                  srcset="
+                    img/form/photo-mobile@1x.webp 1x,
+                    img/form/photo-mobile@2x.webp 2x
+                  " />
+                <source
+                  media="(max-width: 1439px)"
+                  type="image/webp"
+                  srcset="
+                    img/form/photo-tablet@1x.webp 1x,
+                    img/form/photo-tablet@2x.webp 2x
+                  " />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/form/photo-desktop@1x.webp 1x,
+                    img/form/photo-desktop@2x.webp 2x
+                  " />
+                <source
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                  srcset="
+                    img/form/photo-mobile@1x.jpg 1x,
+                    img/form/photo-mobile@2x.jpg 2x
+                  " />
+                <source
+                  media="(max-width: 1439px)"
+                  type="image/jpg"
+                  srcset="
+                    img/form/photo-tablet@1x.jpg 1x,
+                    img/form/photo-tablet@2x.jpg 2x
+                  " />
+                <img
+                  src="img/form/photo-desktop@1x.jpg"
+                  srcset="img/form/photo-desktop@2x.jpg"
+                  alt=""
+                  width="1240"
+                  height="803" />
+              </picture>
+            </div>
+            <div
+              class="form__wrapper"
+              data-form-validate
+              data-callback="base"
+              data-form="send">
+              <h2>Напишите нам</h2>
+              <p>
+                Оставьте ваши контакты, если у вас остались вопросы —
+                мы&nbsp;на&nbsp;них&nbsp;ответим!
+              </p>
+              <form action="https://echo.htmlacademy.ru/" method="post">
+                <div
+                  class="form__field"
+                  data-validate-type="text"
+                  data-limitation="name"
+                  data-message-base="Поле обязательно к заполнению"
+                  data-message-extra="Проверьте корректность заполнения поля"
+                  data-required>
+                  <label>
+                    <span>Имя</span>
+                    <input type="text" name="name" required />
+                  </label>
+                </div>
+                <div
+                  class="form__field phone-mask"
+                  data-validate-type="phone"
+                  data-on-input-validate
+                  data-message-base="Поле обязательно к заполнению"
+                  data-message-extra="Проверьте корректность заполнения поля"
+                  data-message-success="Поле заполнено верно"
+                  data-required>
+                  <label>
+                    <span>Телефон</span>
+                    <input type="tel" name="phone" autocomplete="off" />
+                  </label>
+                </div>
+                <div
+                  class="form__field form__field--textarea"
+                  data-validate-type="text"
+                  data-on-input-validate
+                  data-message-base="Поле обязательно к заполнению"
+                  data-required>
+                  <label>
+                    <span>Ваше сообщение</span>
+                    <textarea type="text" name="message" required></textarea>
+                  </label>
+                </div>
+
+                <div
+                  class="form__select custom-select slide-up"
+                  data-select="data-select"
+                  data-validate-type="select"
+                  data-message-base="Поле обязательно к заполнению"
+                  data-name="city"
+                  data-required>
+                  <span class="custom-select__title">Выберите город</span>
+                  <button
+                    class="custom-select__button"
+                    type="button"
+                    aria-label="Выберите одну из опций">
+                    <span class="custom-select__text"></span
+                    ><span class="custom-select__icon"></span>
+                  </button>
+                  <ul class="custom-select__list" role="listbox">
+                    <li
+                      class="custom-select__item"
+                      tabindex="0"
+                      data-select-value="Saint-Petersburg">
+                      Санкт-Петербург
+                    </li>
+                    <li
+                      class="custom-select__item"
+                      tabindex="0"
+                      data-select-value="Saint-Petersburg">
+                      Санкт-Петербург
+                    </li>
+                    <li
+                      class="custom-select__item"
+                      tabindex="0"
+                      data-select-value="Saint-Petersburg">
+                      Санкт-Петербург
+                    </li>
+                    <li
+                      class="custom-select__item"
+                      tabindex="0"
+                      data-select-value="Saint-Petersburg">
+                      Санкт-Петербург
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="form__agreement custom-toggle custom-toggle--checkbox"
+                  data-validate-type="checkbox"
+                  data-message-base="Поле обязательно к заполнению">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="agreement"
+                      autocomplete="off"
+                      required />
+                    <span class="custom-toggle__icon"> </span>
+                    <span class="custom-toggle__label"
+                      >Я согласен на обработку моих персональных данных</span
+                    >
+                  </label>
+                </div>
+                <button class="form__button button" type="submit">
+                  <span>Отправить</span>
+                  <span>
+                    <svg width="10" height="10">
+                      <use href="__spritemap#sprite-arrow"></use>
+                    </svg>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
       </main>
       <footer class="footer" data-test="footer">
         <div class="footer__container container">

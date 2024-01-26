@@ -1,0 +1,131 @@
+.custom-toggle {
+  position: relative;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 300;
+
+  display: flex;
+  width: 500px;
+}
+
+.custom-toggle input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  clip: rect(0 0 0 0);
+}
+
+.custom-toggle label {
+  position: relative;
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+
+  padding-left: 30px;
+
+  cursor: pointer;
+
+  @include vp-767 {
+    min-height: 28px;
+  }
+}
+
+.custom-toggle label span {
+  margin-bottom: 0;
+  margin-left: 0;
+
+  @include vp-767 {
+    max-width: 230px;
+  }
+}
+
+.custom-toggle--checkbox .custom-toggle__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
+
+  transition: border 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 9px;
+    height: 6px;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    border-color: $color-transparent;
+    transform: rotate(-45deg);
+
+    transition: background-color 0.3s ease;
+  }
+
+  @include vp-767 {
+    top: 4px;
+  }
+}
+
+.custom-toggle input {
+  &:disabled + .custom-toggle__icon {
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: not-allowed;
+    pointer-events: none;
+
+    &::before {
+      border-color: $color-transparent;
+    }
+  }
+}
+
+.custom-toggle input + .custom-toggle__icon {
+  @include hover-focus {
+    border: 1px solid $color-default-white;
+    background-color: $color-default-blue;
+
+    &::before {
+      border-color: $color-transparent;
+    }
+  }
+}
+
+.custom-toggle input:checked + .custom-toggle__icon {
+  border: 1px solid $color-default-white;
+  background-color: $color-default-white;
+
+  &::before {
+    background-color: $color-transparent;
+    border-color: $color-default-blue;
+  }
+
+  @include hover-focus {
+    border: 1px solid $color-default-white;
+    background-color: $color-default-blue;
+
+    &::before {
+      border-color: $color-default-white;
+    }
+  }
+}
+
+.custom-toggle input:checked {
+  &:disabled + .custom-toggle__icon {
+    border: 1px solid $color-disabled;
+    background-color: $color-disabled;
+    cursor: not-allowed;
+    pointer-events: none;
+
+    &::before {
+      border-color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}

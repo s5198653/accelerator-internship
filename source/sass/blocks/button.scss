@@ -32,7 +32,6 @@
   }
 
   & svg {
-    fill: $color-default-white;
     stroke: $color-default-white;
   }
 
@@ -55,7 +54,6 @@
     }
 
     & svg {
-      fill: $color-default-blue;
       stroke: $color-default-blue;
       transform: rotate(45deg);
     }
@@ -70,7 +68,6 @@
     }
 
     & svg {
-      fill: rgba(49, 109, 194, 0.7);
       stroke: rgba(49, 109, 194, 0.7);
       transform: rotate(45deg);
     }
