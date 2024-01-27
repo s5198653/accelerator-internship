@@ -1,4 +1,5 @@
 import {Modals} from './modals';
+import {initForm} from '../modules/form';
 
 let modals;
 

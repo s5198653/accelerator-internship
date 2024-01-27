@@ -1,5 +1,5 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {Form} from './vendor/form-validate/form';
+import {initForm} from './modules/form';
 import {StickyHeader} from './modules/sticky-header';
 import {initAccordions} from './accordion/init-accordion';
 import {initPhoneMask} from './modules/phone-mask';
@@ -25,10 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const select = new CustomSelect();
     select.init();
-
-    const form = new Form();
-    window.form = form;
-    form.init();
+    initForm();
 
     initHeroSwiper();
     initProgramsSwiper();
