@@ -257,3 +257,20 @@
     }
   }
 }
+
+.form__field,
+.form__select {
+  &.is-invalid {
+    & input,
+    & textarea,
+    & .custom-select__button {
+      border: 1px solid $color-error;
+      background-color: rgba(255, 94, 102, 0.2);
+    }
+
+    .input-message.is-invalid {
+      color: $color-default-white;
+      opacity: 1;
+    }
+  }
+}
