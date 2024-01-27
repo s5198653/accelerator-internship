@@ -21,7 +21,10 @@ export class ScrollLock {
   }
 
   disableScrolling() {
-    this._scrollTop = document.body.dataset.scroll = document.body.dataset.scroll ? document.body.dataset.scroll : this._getBodyScrollTop();
+    this._scrollTop = document.body.dataset.scroll = document.body.dataset
+      .scroll
+      ? document.body.dataset.scroll
+      : this._getBodyScrollTop();
     if (this._getScrollbarWidth()) {
       document.body.style.paddingRight = `${this._getScrollbarWidth()}px`;
       this._fixedBlockElements.forEach((block) => {

@@ -38,11 +38,6 @@
     align-items: center;
     width: 100%;
     min-height: 100%;
-    padding: 60px 40px;
-
-    @include vp-767 {
-      padding: 60px 16px;
-    }
   }
 
   &__overlay {
@@ -66,7 +61,7 @@
     align-items: center;
     gap: 20px;
     width: 510px;
-    height: 611px;
+    min-height: 611px;
     padding: 60px 80px;
 
     background-color: $color-default-white;
@@ -74,7 +69,8 @@
 
     @include vp-767 {
       gap: 15px;
-      width: 100%;
+      width: 290px;
+      min-height: 521px;
       padding: 40px 15px;
     }
   }
@@ -92,6 +88,11 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    @include vp-767 {
+      top: 20px;
+      right: 10px;
+    }
   }
 
   &--responsive {
@@ -149,13 +150,23 @@
   }
 }
 
-.modal__title {
+.modal__form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  color: $color-default-charcoal;
+}
+
+.modal__form-wrapper h2 {
   margin: 0;
+  padding: 10px 0 13px;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
   line-height: 36px;
   color: $color-default-blue;
+  align-self: center;
 
   @include vp-1439 {
     font-size: 28px;
@@ -165,16 +176,20 @@
   @include vp-767 {
     font-size: 18px;
     line-height: 18px;
+    padding-bottom: 3px;
+    padding-top: 0;
   }
 }
 
-.modal__description {
+.modal__form-wrapper p {
   margin: 0;
-  text-align: center;
+  padding-bottom: 15px;
+
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+  text-align: center;
 
   @include vp-1439 {
     line-height: 20px;
@@ -182,27 +197,27 @@
 
   @include vp-767 {
     font-size: 14px;
+    padding: 0 26px;
   }
 }
 
-.feedback__form {
-  padding-top: 10px;
+.modal__form-wrapper form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 
-  @include vp-767 {
-    gap: 15px;
+  @include vp-1439 {
+    gap: 14px;
+    min-height: 338px;
   }
 }
 
-.modal__field,
 .modal__field label {
   display: flex;
   flex-direction: column;
   gap: 12px;
 
-  @include vp-767 {
+  @include vp-1439 {
     gap: 8px;
   }
 }
@@ -219,96 +234,155 @@
   }
 
   @include vp-767 {
-    font-size: 14px;
     line-height: 14px;
   }
 }
 
 .modal__field input,
-.modal__field select {
+.modal__field textarea {
   width: 350px;
-  height: 50px;
+  min-height: 50px;
+
+  color: $color-default-charcoal;
+  background-color: $color-transparent;
   border-radius: 8px;
-  border: 1px solid;
-  opacity: 0.3;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+
+  &:disabled {
+    opacity: 0.4;
+    background-color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    border-color: $color-default-charcoal;
+  }
+
+  @include active {
+    border-color: $color-default-charcoal;
+  }
+
+  @include vp-767 {
+    width: 260px;
+    min-height: 40px;
+  }
+}
+
+.modal__select {
+  width: 350px;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include vp-767 {
+    width: 260px;
+  }
+}
+
+.modal__select .custom-select__title {
+  color: $color-default-charcoal;
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.modal__select .custom-select__button {
+  border-color: rgba(72, 72, 72, 0.3);
+
+  &:disabled {
+    opacity: 0.4;
+    background-color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    border-color: $color-default-charcoal;
+  }
+
+  @include active {
+    border-color: $color-default-charcoal;
+  }
+
+  @include vp-767 {
+    height: 44px;
+  }
+}
+
+.modal__select .custom-select__icon {
+  width: 16px;
+  height: 10px;
+  background-color: $color-default-charcoal;
+}
+
+.modal__select .custom-select__list {
+  border-color: $color-default-charcoal;
+}
+
+.modal__select .custom-select__text {
+  color: $color-default-charcoal;
 }
 
 .modal__agreement {
-  padding-bottom: 10px;
+  padding: 0;
+  max-width: 350px;
 
-  & label {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-  }
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
 
-  & input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-  }
-
-  & span {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
-
-    & svg {
-      position: absolute;
-      left: 3px;
-    }
-
-    &::before {
-      content: '';
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-      flex-grow: 0;
-      border: 1px solid rgba(72, 72, 72, 0.3);
-      border-radius: 2px;
-    }
-  }
-
-  & p {
-    margin: 0;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 12px;
-    opacity: 0.9;
-
-    @include vp-767 {
-      line-height: 14px;
-    }
+  @include vp-767 {
+    max-width: 230px;
+    line-height: 14px;
   }
 }
 
-.modal__agreement input:not(:disabled):not(:checked) + span:hover::before {
-  border-color: rgba(72, 72, 72, 1);
+.modal__agreement .custom-toggle__icon {
+  border-color: $color-default-charcoal;
 }
 
-.modal__agreement input:not(:disabled):active + span::before {
-  background-color: $color-default-blue;
-  border-color: $color-default-blue;
-}
+.custom-toggle input:checked + .custom-toggle__icon {
+  border-color: $color-default-charcoal;
 
-.modal__agreement input:focus + span::before {
-  border-color: rgba(72, 72, 72, 1);
-}
-
-.modal__agreement input:checked + span::before {
-  border-color: $color-default-blue;
-  background-color: $color-default-blue;
-}
-
-.modal__agreement input:disabled + span::before {
-  background-color: $color-disabled;
-  border-color: $color-disabled;
+  &::before {
+    border-color: $color-default-charcoal;
+  }
 }
 
 .modal__button {
   margin: 0 auto;
+
+  @include vp-767 {
+    margin: 0;
+    justify-content: space-between;
+
+    & span:first-child {
+      width: 162px;
+    }
+  }
+}
+
+.modal__field,
+.modal__select,
+.modal__agreement {
+  &.is-invalid {
+    & input,
+    & textarea,
+    & .custom-select__button {
+      border: 1px solid $color-error;
+      background-color: rgba(255, 94, 102, 0.2);
+    }
+
+    .input-message.is-invalid {
+      color: $color-error;
+      opacity: 1;
+    }
+  }
 }

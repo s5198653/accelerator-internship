@@ -36,14 +36,11 @@
       <div data-test="slider">
         <header class="header header--sticky" data-header="sticky">
           <div class="header__container container">
-            <a
-              class="header__logo logo"
-              href="#"
-              aria-label="Переход на главную страницу">
+            <div class="header__logo logo">
               <svg width="52" height="52">
                 <use href="__spritemap#sprite-logotype"></use>
               </svg>
-            </a>
+            </div>
             <nav class="header__nav">
               <div class="header__overlay"></div>
               <button
@@ -2167,14 +2164,11 @@
       <footer class="footer" data-test="footer">
         <div class="footer__container container">
           <div class="footer__main-wrapper">
-            <a
-              class="footer__logo logo"
-              href="#"
-              aria-label="Переход на главную страницу">
+            <div class="footer__logo logo">
               <svg width="52" height="52">
                 <use href="__spritemap#sprite-logotype"></use>
               </svg>
-            </a>
+            </div>
             <nav class="footer__nav">
               <ul class="footer__nav-list">
                 <li class="footer__nav-item">
@@ -2245,16 +2239,17 @@
               <use xlink:href="__spritemap#sprite-cross"></use>
             </svg>
           </button>
-          <h2 class="modal__title">Напишите нам</h2>
-          <p class="modal__description">
-            Оставьте ваши контакты, если у вас остались вопросы — мы на них
-            ответим!
-          </p>
-          <div data-form-validate data-callback="base" data-form="send">
-            <form
-              class="feedback__form"
-              action="https://echo.htmlacademy.ru/"
-              method="post">
+          <div
+            class="modal__form-wrapper"
+            data-form-validate
+            data-callback="base"
+            data-form="send">
+            <h2>Напишите нам</h2>
+            <p>
+              Оставьте ваши контакты, если&nbsp;у&nbsp;вас остались вопросы — мы
+              на них ответим!
+            </p>
+            <form action="https://echo.htmlacademy.ru/" method="post">
               <div
                 class="modal__field"
                 data-validate-type="text"
@@ -2280,31 +2275,62 @@
                   <input type="tel" name="phone" autocomplete="off" />
                 </label>
               </div>
-              <div class="modal__field">
-                <span>Выберите город</span>
-                <select name="City">
-                  <span>
-                    <svg width="16" height="16">
-                      <use xlink:href="__spritemap#sprite-arrow-down"></use>
-                    </svg>
-                  </span>
-                  <option value=""></option>
-                  <option value="Saint-Petersburg">Санкт-Петербург</option>
-                </select>
+              <div
+                class="modal__select custom-select slide-up"
+                data-select="data-select"
+                data-validate-type="select"
+                data-message-base="Поле обязательно к заполнению"
+                data-name="city"
+                data-required>
+                <span class="custom-select__title">Выберите город</span>
+                <button
+                  class="custom-select__button"
+                  type="button"
+                  aria-label="Выберите одну из опций">
+                  <span class="custom-select__text"></span
+                  ><span class="custom-select__icon"></span>
+                </button>
+                <ul class="custom-select__list" role="listbox">
+                  <li
+                    class="custom-select__item"
+                    tabindex="0"
+                    data-select-value="Saint-Petersburg">
+                    Санкт-Петербург
+                  </li>
+                  <li
+                    class="custom-select__item"
+                    tabindex="0"
+                    data-select-value="Saint-Petersburg">
+                    Санкт-Петербург
+                  </li>
+                  <li
+                    class="custom-select__item"
+                    tabindex="0"
+                    data-select-value="Saint-Petersburg">
+                    Санкт-Петербург
+                  </li>
+                  <li
+                    class="custom-select__item"
+                    tabindex="0"
+                    data-select-value="Saint-Petersburg">
+                    Санкт-Петербург
+                  </li>
+                </ul>
               </div>
-              <div class="modal__agreement">
+              <div
+                class="modal__agreement custom-toggle custom-toggle--checkbox"
+                data-validate-type="checkbox"
+                data-message-base="Поле обязательно к заполнению">
                 <label>
                   <input
                     type="checkbox"
                     name="agreement"
                     autocomplete="off"
                     required />
-                  <span>
-                    <svg width="15" height="15">
-                      <use xlink:href="__spritemap#sprite-check"></use>
-                    </svg>
+                  <span class="custom-toggle__icon"> </span>
+                  <span class="custom-toggle__label">
+                    Я согласен на обработку моих персональных данных
                   </span>
-                  <p>Я согласен на обработку моих персональных данных</p>
                 </label>
               </div>
               <button class="modal__button button" type="submit">
