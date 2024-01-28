@@ -17,18 +17,26 @@
 .hero__slide {
   position: relative;
   height: auto;
+  min-height: 800px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .hero__slide-content {
-  max-width: $vp-1440;
-  margin: 0 auto;
-  z-index: 1;
   position: relative;
-  display: flex;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: 968px;
   align-items: flex-end;
-  min-height: 800px;
+  max-width: $vp-1440;
+  width: 100%;
+
   height: auto;
-  padding: 423px 100px 50px;
+  margin: 0 auto;
+  padding: 100px 100px 50px;
 
   @include vp-1439 {
     min-height: 1024px;
@@ -39,6 +47,10 @@
     min-height: 568px;
     padding: 231px 15px 20px;
   }
+}
+
+.hero__pagination-wrapper {
+  position: relative;
 }
 
 .hero__slide-content-wrapper {
@@ -61,6 +73,10 @@
   width: 20px;
   height: 20px;
   margin-top: auto;
+
+  & svg {
+    fill: $color-default-white;
+  }
 
   &--top {
     margin-left: 94px;
@@ -203,8 +219,7 @@
 }
 
 .hero__swiper-pagination.swiper-pagination {
-  top: 415px;
-  left: calc(50% - 620px);
+  bottom: 0;
 
   display: flex;
   gap: 4px;
@@ -217,20 +232,16 @@
   background-color: $color-default-white;
 
   @include vp-1439 {
-    top: 653px;
-    left: 45px;
   }
 
   @include vp-767 {
-    top: 213px;
-    left: 15px;
     width: 80px;
     height: 28px;
     border-radius: 12px 12px 0px 0px;
   }
 }
 
-.swiper-pagination-bullet {
+.hero__swiper-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   border: 1px solid $color-default-blue;
@@ -243,6 +254,6 @@
   }
 }
 
-.swiper-pagination-bullet-active {
+.hero__swiper-pagination .swiper-pagination-bullet-active {
   background-color: $color-default-blue;
 }
