@@ -20,57 +20,20 @@
 
   transition: opacity 0.3s ease;
 
-  & span:not(:first-child) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 46px;
-    height: 46px;
-    color: $color-default-white;
-    background-color: $color-default-blue;
-    border-radius: 50%;
-  }
-
-  & svg {
-    stroke: $color-default-white;
-  }
-
   &:disabled,
   &--disabled {
     color: $color-disabled;
     pointer-events: none;
-
-    & span:not(:first-child) {
-      background-color: $color-disabled;
-    }
   }
 
   @include hover-focus {
     background-color: $color-default-blue;
     color: $color-default-white;
-
-    & span:not(:first-child) {
-      background-color: $color-default-white;
-    }
-
-    & svg {
-      stroke: $color-default-blue;
-      transform: rotate(45deg);
-    }
   }
 
   @include active {
     background-color: $color-default-blue;
     color: rgba(255, 255, 255, 0.7);
-
-    & span:not(:first-child) {
-      background-color: $color-default-white;
-    }
-
-    & svg {
-      stroke: rgba(49, 109, 194, 0.7);
-      transform: rotate(45deg);
-    }
   }
 
   @include vp-767 {
@@ -80,10 +43,50 @@
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.24px;
-
-    & span:not(:first-child) {
-      width: 34px;
-      height: 34px;
-    }
   }
+}
+
+.button span:not(:first-child) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  color: $color-default-white;
+  background-color: $color-default-blue;
+  border-radius: 50%;
+
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.button:disabled span:not(:first-child),
+.button--disabled span:not(:first-child) {
+  background-color: $color-disabled;
+}
+
+.button:hover span:not(:first-child),
+.button:focus span:not(:first-child) {
+  background-color: $color-default-white;
+}
+
+.button:active span:not(:first-child) {
+  background-color: $color-default-white;
+}
+
+.button svg {
+  stroke: $color-default-white;
+}
+
+.button:hover svg,
+.button:focus svg {
+  stroke: $color-default-blue;
+  transform: rotate(45deg);
+}
+
+.button:active svg {
+  stroke: rgba(49, 109, 194, 0.7);
+  transform: rotate(45deg);
 }

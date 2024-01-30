@@ -122,20 +122,15 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  opacity: 0.8;
 
-  @include vp-1439 {
-    gap: 8px;
-  }
-}
-
-.form__field span {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  opacity: 0.8;
 
   @include vp-1439 {
+    gap: 8px;
     line-height: 20px;
   }
 
@@ -171,6 +166,16 @@
 
   @include vp-767 {
     width: 260px;
+  }
+}
+
+.form__field--textarea {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include vp-1439 {
+    gap: 8px;
   }
 }
 
@@ -213,64 +218,61 @@
   justify-content: space-between;
   color: $color-default-white;
 
-  & span:first-child {
-    width: 240px;
-  }
-
-  & span:not(:first-child) {
-    background-color: $color-default-white;
-  }
-
-  & svg {
-    stroke: $color-default-blue;
-  }
-
   @include hover-focus {
     color: $color-default-blue;
     background-color: $color-default-white;
-
-    & span:not(:first-child) {
-      background-color: $color-default-blue;
-    }
-
-    & svg {
-      stroke: $color-default-white;
-    }
   }
 
   @include active {
     background-color: $color-default-white;
     color: rgba(49, 109, 194, 0.7);
-
-    & span:not(:first-child) {
-      background-color: $color-default-blue;
-    }
-
-    & svg {
-      stroke: rgba(255, 255, 255, 0.7);
-    }
-  }
-
-  @include vp-767 {
-    & span:first-child {
-      width: 162px;
-    }
   }
 }
 
-.form__field,
-.form__select {
-  &.is-invalid {
-    & input,
-    & textarea,
-    & .custom-select__button {
-      border: 1px solid $color-error;
-      background-color: rgba(255, 94, 102, 0.2);
-    }
+.form__button span:first-child {
+  width: 240px;
 
-    .input-message.is-invalid {
-      color: $color-default-white;
-      opacity: 1;
-    }
+  @include vp-767 {
+    width: 162px;
   }
+}
+
+.form__button span:not(:first-child) {
+  background-color: $color-default-white;
+}
+
+.form__button svg {
+  stroke: $color-default-blue;
+}
+
+.form__button:hover span:not(:first-child),
+.form__button:focus span:not(:first-child) {
+  background-color: $color-default-blue;
+}
+
+.form__button:hover svg,
+.form__button:focus svg {
+  stroke: $color-default-white;
+}
+
+.form__button:active span:not(:first-child) {
+  background-color: $color-default-blue;
+}
+
+.form__button:active svg {
+  stroke: rgba(255, 255, 255, 0.7);
+}
+
+.form__field.is-invalid input,
+.form__field.is-invalid textarea,
+.form__select.is-invalid .custom-select__button {
+  border: 1px solid $color-error;
+  background-color: rgba(255, 94, 102, 0.2);
+}
+
+.form__field.is-invalid .input-message.is-invalid,
+.form__select.is-invalid .input-message.is-invalid,
+.form__agreement.is-invalid .input-message.is-invalid {
+  color: $color-default-white;
+  opacity: 1;
 }

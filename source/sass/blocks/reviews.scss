@@ -289,22 +289,12 @@
     bottom: 0;
   }
 
-  & svg {
-    stroke: $color-default-blue;
-  }
-
   &::after {
     content: none;
   }
 
   &--next svg {
     transform: rotate(180deg);
-  }
-
-  &:disabled {
-    & svg {
-      stroke: $color-disabled;
-    }
   }
 
   @include hover-focus {
@@ -315,10 +305,6 @@
   @include active {
     background-color: $color-default-white;
     border-radius: 30px;
-
-    & svg {
-      opacity: 0.7;
-    }
   }
 
   @include vp-1439 {
@@ -336,6 +322,18 @@
       right: 0;
     }
   }
+}
+
+.reviews__swiper-button svg {
+  stroke: $color-default-blue;
+}
+
+.reviews__swiper-button:active svg {
+  opacity: 0.7;
+}
+
+.reviews__swiper-button:disabled svg {
+  stroke: $color-disabled;
 }
 
 .reviews__swiper-scrollbar.swiper-scrollbar {

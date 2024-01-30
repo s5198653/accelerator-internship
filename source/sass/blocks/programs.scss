@@ -142,23 +142,23 @@
   margin-top: auto;
   width: 18px;
   height: 18px;
+}
 
-  & svg {
-    fill: $color-default-white;
-  }
+.programs__angle svg {
+  fill: $color-default-white;
 }
 
 .programs__slide-content h2 {
   margin: 0;
   width: 194px;
-  padding: 14px 18px 6px 18px;
+  padding: 14px 18px 6px;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
   color: $color-default-blue;
   background-color: $color-default-white;
-  border-radius: 12px 12px 0px 0px;
+  border-radius: 12px 12px 0 0;
 
   @include vp-1439 {
     width: 173px;
@@ -181,7 +181,7 @@
   gap: 16px;
   padding: 11px 17px 15px;
   background-color: $color-default-white;
-  border-radius: 0px 12px 12px 12px;
+  border-radius: 0 12px 12px;
 
   @include vp-1439 {
     padding: 5px 17px 10px;
@@ -211,50 +211,48 @@
 .programs__slide-button {
   cursor: pointer;
 
-  & span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    background-color: $color-default-blue;
-    border-radius: 44px;
-  }
-
-  & svg {
-    stroke: $color-default-white;
-  }
-
   &--disabled {
     color: $color-disabled;
     pointer-events: none;
-
-    & span {
-      background-color: $color-disabled;
-    }
   }
+}
 
-  @include hover-focus {
-    & span {
-      background-color: $color-default-white;
-    }
+.programs__slide-button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: $color-default-blue;
+  border-radius: 44px;
+}
 
-    & svg {
-      stroke: $color-default-blue;
-      transform: rotate(45deg);
-    }
-  }
+.programs__slide-button svg {
+  stroke: $color-default-white;
+}
 
-  @include active {
-    & span {
-      background-color: $color-default-white;
-    }
+.programs__slide-button--disabled span {
+  background-color: $color-disabled;
+}
 
-    & svg {
-      stroke: rgba(49, 109, 194, 0.7);
-      transform: rotate(45deg);
-    }
-  }
+.programs__slide-button:hover span,
+.programs__slide-button:focus span {
+  background-color: $color-default-white;
+}
+
+.programs__slide-button:hover svg,
+.programs__slide-button:active svg {
+  stroke: $color-default-blue;
+  transform: rotate(45deg);
+}
+
+.programs__slide-button:active span {
+  background-color: $color-default-white;
+}
+
+.programs__slide-button:active svg {
+  stroke: rgba(49, 109, 194, 0.7);
+  transform: rotate(45deg);
 }
 
 .programs__slide-image {
@@ -308,22 +306,12 @@
     bottom: 0;
   }
 
-  & svg {
-    stroke: $color-default-blue;
-  }
-
   &::after {
     content: none;
   }
 
   &--next svg {
     transform: rotate(180deg);
-  }
-
-  &:disabled {
-    & svg {
-      stroke: $color-disabled;
-    }
   }
 
   @include hover-focus {
@@ -334,10 +322,6 @@
   @include active {
     background-color: $color-default-white;
     border-radius: 30px;
-
-    & svg {
-      opacity: 0.7;
-    }
   }
 
   @include vp-1439 {
@@ -355,6 +339,18 @@
       right: 0;
     }
   }
+}
+
+.programs__swiper-button svg {
+  stroke: $color-default-blue;
+}
+
+.programs__swiper-button:disabled svg {
+  stroke: $color-disabled;
+}
+
+.programs__swiper-button:active svg {
+  opacity: 0.7;
 }
 
 .programs__swiper-scrollbar.swiper-scrollbar {
