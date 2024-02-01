@@ -1,40 +1,45 @@
-// Vendor
-// ---------------------------------
-
-@import "vendor/normalize";
-
-// Swiper
-// ---------------------------------
-@import "swiper/css/bundle";
-
 // Global
 // ---------------------------------
 
-@import "variables";
-@import "mixins";
-@import "global/fonts";
-@import "global/reboot";
-@import "global/utils";
-@import "global/container";
+@import 'variables';
+@import 'mixins';
+@import 'global/fonts';
+@import 'global/reboot';
+@import 'global/utils';
+@import 'global/container';
+
+// Vendor
+// ---------------------------------
+
+@import 'vendor/normalize';
+@import 'vendor/custom-select';
+
+// Swiper
+// ---------------------------------
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/grid';
+@import 'swiper/css/scrollbar';
+@import 'swiper/css/keyboard';
 
 // Blocks
 // ---------------------------------
 
-@import "blocks/button";
-@import "blocks/accordion";
-@import "blocks/data-accordion";
-@import "blocks/custom-select";
-@import "blocks/custom-toggle";
-@import "blocks/modal";
-@import "blocks/header";
-@import "blocks/hero";
-@import "blocks/about";
-@import "blocks/programs";
-@import "blocks/grant";
-@import "blocks/news";
-@import "blocks/faq";
-@import "blocks/reviews";
-@import "blocks/contacts";
-@import "blocks/form";
-@import "blocks/social";
-@import "blocks/footer";
+@import 'blocks/button';
+@import 'blocks/accordion';
+@import 'blocks/data-accordion';
+@import 'blocks/custom-toggle';
+@import 'blocks/modal';
+@import 'blocks/header';
+@import 'blocks/hero';
+@import 'blocks/about';
+@import 'blocks/programs';
+@import 'blocks/grant';
+@import 'blocks/news';
+@import 'blocks/faq';
+@import 'blocks/reviews';
+@import 'blocks/contacts';
+@import 'blocks/form';
+@import 'blocks/social';
+@import 'blocks/footer';

@@ -20,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const stickyHeader = new StickyHeader();
     stickyHeader.init();
 
+    initHeroSwiper();
     initModals();
     initPhoneMask();
 
@@ -27,7 +28,6 @@ window.addEventListener('DOMContentLoaded', () => {
     select.init();
     initForm();
 
-    initHeroSwiper();
     initProgramsSwiper();
     initNewsSwiper();
     initAccordions();

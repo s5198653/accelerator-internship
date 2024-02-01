@@ -32,6 +32,7 @@
 
 .programs__text-wrapper h2 {
   margin: 0;
+  max-width: 700px;
   font-size: 50px;
   font-style: normal;
   font-weight: 400;
@@ -39,17 +40,20 @@
   color: $color-default-blue;
 
   @include vp-1439 {
+    max-width: 350px;
     font-size: 34px;
   }
 
   @include vp-767 {
     padding-top: 2px;
+    max-width: 200px;
     font-size: 20px;
     line-height: 20px;
   }
 }
 
 .programs__button {
+  max-width: 235px;
   @include vp-767 {
     position: absolute;
     bottom: 0;
@@ -123,17 +127,17 @@
 
   display: grid;
   grid-template-columns: 194px 127px;
-  grid-template-rows: 40px 79px;
+  grid-template-rows: minmax(40px, auto) minmax(79px, auto);
 
   @include vp-1439 {
     grid-template-columns: 173px 90px;
-    grid-template-rows: 38px 77px;
+    grid-template-rows: minmax(38px, auto) minmax(77px, auto);
     padding-right: 41px;
   }
 
   @include vp-767 {
     grid-template-columns: 146px 124px;
-    grid-template-rows: 42px 69px;
+    grid-template-rows: minmax(42px, auto) minmax(69px, auto);
     padding: 18px 10px;
   }
 }

@@ -205,8 +205,14 @@
 }
 
 .hero__link {
+  max-width: 200px;
+
   @include vp-1439 {
     margin-bottom: auto;
+  }
+
+  @include vp-767 {
+    max-width: 152px;
   }
 }
 
