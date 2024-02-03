@@ -3,15 +3,13 @@
   flex-direction: column;
   gap: 60px;
   margin-top: 120px;
-  padding-bottom: 2px;
 
   @include vp-1439 {
     margin-top: 100px;
-    padding-bottom: 0;
   }
 
   @include vp-767 {
-    gap: 41px;
+    gap: 40px;
     margin-top: 60px;
   }
 }
@@ -20,7 +18,7 @@
   display: grid;
   grid-template-columns: 400px 500px;
   justify-content: space-between;
-  padding-right: 106px;
+  padding-right: 104px;
 
   @include vp-1439 {
     grid-template-columns: 500px;
@@ -50,7 +48,7 @@
 .about__goal-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 31px;
 
   @include vp-1439 {
     gap: 23px;
@@ -123,18 +121,19 @@
 }
 
 .about__goal-wrapper p {
+  padding-bottom: 2px;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
 
   @include vp-1439 {
-    line-height: 20px;
     padding-bottom: 13px;
+    line-height: 20px;
   }
 
   @include vp-767 {
-    padding-bottom: 15px;
+    padding-bottom: 16px;
     font-size: 14px;
   }
 }
@@ -155,8 +154,8 @@
   border-radius: 20px;
 
   @include vp-1439 {
-    gap: 20px 30px;
-    padding: 42px;
+    gap: 22px 30px;
+    padding: 42px 40px 40px;
   }
 
   @include vp-767 {
@@ -168,32 +167,37 @@
 
 .about__item {
   position: relative;
-  padding: 20px 0 0 20px;
+  padding: 22px 0 0 20px;
+
+  @include vp-1439 {
+    padding-top: 20px;
+  }
 }
 
 .about__item-wrapper {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 24px;
+  gap: 32px;
   height: 100%;
-  padding: 30px 60px 21px;
+  padding: 27px 60px 23px;
   border-radius: 16px;
   border: 1px solid $color-default-alabaster;
 
   @include vp-1439 {
     grid-template-columns: 1fr;
-    gap: 6px;
-    padding: 30px 15px 26px 30px;
+    gap: 8px;
+    padding: 27px 15px 25px 29px;
   }
 
   @include vp-767 {
     gap: 4px;
-    padding: 19px 20px 23px 19px;
+    padding: 17px 20px 23px 19px;
   }
 }
 
 .about__item h4 {
   margin: 0;
+  padding-top: 2px;
   font-size: 26px;
   font-style: normal;
   font-weight: 400;
