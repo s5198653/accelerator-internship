@@ -136,7 +136,7 @@
 .header__burger {
   position: relative;
   min-height: 54px;
-  max-width: 286px;
+  width: 134px;
   display: inline-flex;
   padding: 2px 70px 2px 20px;
   justify-content: center;
@@ -148,7 +148,7 @@
   border-radius: 30px;
   cursor: pointer;
 
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
 
   &:disabled {
     color: $color-disabled;
@@ -163,10 +163,6 @@
   @include active {
     background-color: $color-default-blue;
     color: rgba(255, 255, 255, 0.7);
-  }
-
-  @include vp-767 {
-    max-width: 290px;
   }
 }
 
