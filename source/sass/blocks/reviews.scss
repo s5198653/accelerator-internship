@@ -89,7 +89,7 @@
   border: 1px solid $color-default-blue;
 
   @include vp-1439 {
-    gap: 22px;
+    gap: 24px;
     width: 560px;
     min-height: 395px;
   }
@@ -215,7 +215,7 @@
   gap: 13px;
 
   @include vp-1439 {
-    gap: 19px;
+    gap: 17px;
   }
 
   @include vp-767 {
