@@ -25,7 +25,7 @@
   cursor: pointer;
 
   &--wide {
-    padding: 32px 39px 32px;
+    padding: 32px 39px;
   }
 
   @include hover-focus {
@@ -52,7 +52,7 @@
     border-radius: 14px;
 
     &--wide {
-      padding: 19px 14px 19px;
+      padding: 19px 14px;
     }
   }
 }
@@ -106,7 +106,7 @@
   &::before {
     position: absolute;
     right: 19px;
-    content: '';
+    content: "";
     width: 1px;
     height: 18px;
 
@@ -116,7 +116,7 @@
   &::after {
     position: absolute;
     right: 11px;
-    content: '';
+    content: "";
     width: 18px;
     height: 1px;
 
@@ -221,6 +221,7 @@
 
 .accordion__element.is-active .accordion__button-icon {
   background-color: $color-default-white;
+
   &::before {
     opacity: 0;
   }
@@ -248,38 +249,31 @@
   }
 }
 
-.accordion__element.is-active:has(.accordion__button:hover),
-.accordion__element.is-active:has(.accordion__button:focus) {
-  background-color: $color-default-white;
+.accordion__element.is-active:has(.accordion__button:hover) .accordion__element-wrapper,
+.accordion__element.is-active:has(.accordion__button:focus) .accordion__element-wrapper {
+  background-color: $color-default-blue;
 }
 
-.accordion__element.is-active:has(.accordion__button:active) {
-  background-color: $color-default-white;
+.accordion__element.is-active:has(.accordion__button:active) .accordion__element-wrapper {
+  background-color: $color-active;
   color: $color-active;
 }
 
-.accordion__button:hover .accordion__button-icon,
-.accordion__button:focus .accordion__button-icon {
-  background-color: $color-default-white;
-
-  &::before {
-    background-color: $color-default-blue;
-  }
+.accordion__element.is-active:has(.accordion__button:hover) .accordion__button-icon,
+.accordion__element.is-active:has(.accordion__button:focus) .accordion__button-icon {
+  background-color: $color-default-blue;
+  border-color: $color-default-white;
 
   &::after {
-    background-color: $color-default-blue;
+    background-color: $color-default-white;
   }
 }
 
-.accordion__button:active .accordion__button-icon {
-  background-color: $color-active;
-
-  &::before {
-    background-color: $color-default-white;
-  }
+.accordion__element.is-active:has(.accordion__button:active) .accordion__button-icon {
+  background-color: $color-default-white;
 
   &::after {
-    background-color: $color-default-white;
+    background-color: $color-active;
   }
 }
 
