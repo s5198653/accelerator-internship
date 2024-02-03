@@ -1,14 +1,18 @@
 import Swiper from 'swiper';
-import {Pagination} from 'swiper/modules';
+import {Pagination, Autoplay} from 'swiper/modules';
 
 const initHeroSwiper = () => {
   const slider = new Swiper('[data-swiper="hero-swiper"]', {
     observer: true,
-    modules: [Pagination],
+    modules: [Pagination, Autoplay],
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1,
     spaceBetween: 0,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: '.swiper-slide-active .hero__swiper-pagination',
       clickable: true,
