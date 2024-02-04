@@ -39,7 +39,7 @@
   &::after {
     position: absolute;
     bottom: 0;
-    content: "";
+    content: '';
     width: 100%;
     height: 2px;
     opacity: 0.2;
@@ -169,4 +169,16 @@
 
 .contacts__image img {
   border-radius: 16px;
+  width: 1240px;
+  height: 500px;
+  object-fit: cover;
+
+  @include vp-1439 {
+    width: 678px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    height: 240px;
+  }
 }

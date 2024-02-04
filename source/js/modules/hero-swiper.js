@@ -7,6 +7,7 @@ const initHeroSwiper = () => {
     modules: [Pagination, Autoplay],
     direction: 'horizontal',
     loop: true,
+    autoHeight: true,
     slidesPerView: 1,
     spaceBetween: 0,
     autoplay: {

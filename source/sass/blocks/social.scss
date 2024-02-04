@@ -8,6 +8,7 @@
   max-width: 160px;
 
   @include vp-1439 {
+    max-width: 260px;
     gap: 10px;
   }
 }

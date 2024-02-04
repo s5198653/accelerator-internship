@@ -1,16 +1,7 @@
 .accordion {
   display: flex;
   flex-direction: column;
-  max-width: 1028px;
   gap: 10px;
-
-  @include vp-1439 {
-    max-width: 678px;
-  }
-
-  @include vp-767 {
-    max-width: 290px;
-  }
 }
 
 .accordion__element-wrapper {
@@ -106,7 +97,7 @@
   &::before {
     position: absolute;
     right: 19px;
-    content: "";
+    content: '';
     width: 1px;
     height: 18px;
 
@@ -116,7 +107,7 @@
   &::after {
     position: absolute;
     right: 11px;
-    content: "";
+    content: '';
     width: 18px;
     height: 1px;
 
@@ -249,18 +240,23 @@
   }
 }
 
-.accordion__element.is-active:has(.accordion__button:hover) .accordion__element-wrapper,
-.accordion__element.is-active:has(.accordion__button:focus) .accordion__element-wrapper {
+.accordion__element.is-active:has(.accordion__button:hover)
+  .accordion__element-wrapper,
+.accordion__element.is-active:has(.accordion__button:focus)
+  .accordion__element-wrapper {
   background-color: $color-default-blue;
 }
 
-.accordion__element.is-active:has(.accordion__button:active) .accordion__element-wrapper {
+.accordion__element.is-active:has(.accordion__button:active)
+  .accordion__element-wrapper {
   background-color: $color-active;
   color: $color-active;
 }
 
-.accordion__element.is-active:has(.accordion__button:hover) .accordion__button-icon,
-.accordion__element.is-active:has(.accordion__button:focus) .accordion__button-icon {
+.accordion__element.is-active:has(.accordion__button:hover)
+  .accordion__button-icon,
+.accordion__element.is-active:has(.accordion__button:focus)
+  .accordion__button-icon {
   background-color: $color-default-blue;
   border-color: $color-default-white;
 
@@ -269,7 +265,8 @@
   }
 }
 
-.accordion__element.is-active:has(.accordion__button:active) .accordion__button-icon {
+.accordion__element.is-active:has(.accordion__button:active)
+  .accordion__button-icon {
   background-color: $color-default-white;
 
   &::after {
@@ -279,7 +276,6 @@
 
 .accordion__wrapper p {
   margin: 0;
-  max-width: 690px;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -287,12 +283,10 @@
   color: $color-default-alabaster;
 
   @include vp-1439 {
-    max-width: 587px;
     line-height: 20px;
   }
 
   @include vp-767 {
-    max-width: 260px;
     font-size: 14px;
   }
 }
