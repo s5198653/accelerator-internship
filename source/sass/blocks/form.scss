@@ -88,7 +88,7 @@
 
 .form__wrapper p {
   margin: 0;
-  padding-bottom: 15px;
+  padding-bottom: 8px;
 
   font-size: 16px;
   font-style: normal;
@@ -96,6 +96,7 @@
   line-height: 26px;
 
   @include vp-1439 {
+    padding-bottom: 15px;
     line-height: 20px;
   }
 

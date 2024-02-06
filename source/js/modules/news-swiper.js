@@ -23,7 +23,7 @@ const initNewsSwiper = () =>
     breakpoints: {
       1440: {
         slidesPerView: 'auto',
-        slidesPerGroup: 1,
+        slidesPerGroup: 3,
         spaceBetween: 32,
         grid: {
           rows: 1,
@@ -32,7 +32,8 @@ const initNewsSwiper = () =>
         allowTouchMove: false,
       },
       768: {
-        slidesPerView: 'auto',
+        slidesPerView: 2,
+        slidesPerGroup: 2,
         spaceBetween: 30,
 
         grid: {
@@ -43,6 +44,7 @@ const initNewsSwiper = () =>
       },
       320: {
         slidesPerView: 'auto',
+        slidesPerGroup: 1,
         spaceBetween: 20,
 
         grid: {
