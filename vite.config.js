@@ -30,12 +30,11 @@ export default {
                   utilizeAbsolute: false,
                 },
                 removeViewBox: false, // https://github.com/svg/svgo/issues/1128
+                cleanupIDs: {
+                  minify: false,
+                  remove: false,
+                },
               },
-              cleanupIDs: {
-                minify: false,
-                remove: false,
-              },
-              convertPathData: false
             },
           },
           'removeDimensions',
