@@ -9,6 +9,14 @@ module.exports = async (page, scenario, vp) => {
     });
   });
 
+  await page.evaluate((scenario) => {
+    /** force load lazy images */
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    lazyImages.forEach((i) => {
+      i.removeAttribute('loading');
+    });
+  }, scenario);
+
   // await require('./clickAndHoverHelper')(page, scenario);
 
   if (scenario.showSelectors) {
