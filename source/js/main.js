@@ -10,6 +10,7 @@ import {initModals} from './modals/init-modals';
 import {initProgramsSwiper} from './modules/programs-swiper';
 import {initNewsSwiper} from './modules/news-swiper';
 import {initReviewsSwiper} from './modules/reviews-swiper';
+import {initAutoResizeTextarea} from './auto-resize-textarea/auto-resize-textarea';
 
 window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
@@ -22,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     initHeroSwiper();
     initModals();
+    initAutoResizeTextarea();
     initPhoneMask();
 
     const select = new CustomSelect();

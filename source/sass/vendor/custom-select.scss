@@ -309,12 +309,10 @@
   }
 
   .input-message {
-    position: absolute;
-    right: 0;
-    bottom: -5px;
+    margin-top: -10px;
 
     &.is-invalid {
-      color: #ff0000;
+      color: #ffffff;
     }
 
     &.is-valid {

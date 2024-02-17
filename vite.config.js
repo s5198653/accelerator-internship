@@ -1,6 +1,6 @@
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import {ViteImageOptimizer} from 'vite-plugin-image-optimizer';
 import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap';
-import { ViteMinifyPlugin } from 'vite-plugin-minify';
+import {ViteMinifyPlugin} from 'vite-plugin-minify';
 
 /** @type {import('vite').UserConfig} */
 export default {
@@ -40,17 +40,17 @@ export default {
       png: {
         // https://sharp.pixelplumbing.com/api-output#png
         quality: 80,
-        palette: true
+        palette: true,
       },
       jpeg: {
         // https://sharp.pixelplumbing.com/api-output#jpeg
         quality: 80,
-        progressive: true
+        progressive: true,
       },
       jpg: {
         // https://sharp.pixelplumbing.com/api-output#jpeg
         quality: 80,
-        progressive: true
+        progressive: true,
       },
       // Cache assets in cacheLocation. When enabled, reads and writes asset files with their hash suffix from the specified path.
       cache: true,
@@ -58,15 +58,15 @@ export default {
     }),
   ],
   css: {
-    devSourcemap: true
+    devSourcemap: true,
   },
   publicDir: 'public',
   root: './source',
   build: {
     outDir: '../dist',
   },
-  base: './',
+  base: '/accelerator-internship',
   server: {
     port: 3000,
-  }
+  },
 };

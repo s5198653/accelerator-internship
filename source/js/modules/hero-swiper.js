@@ -10,10 +10,10 @@ const initHeroSwiper = () => {
     autoHeight: true,
     slidesPerView: 1,
     spaceBetween: 0,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   // delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     pagination: {
       el: '.swiper-slide-active .hero__swiper-pagination',
       clickable: true,

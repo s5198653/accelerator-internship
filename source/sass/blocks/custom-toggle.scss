@@ -85,8 +85,17 @@
   }
 }
 
-.custom-toggle input + .custom-toggle__icon {
-  @include hover-focus {
+.custom-toggle input {
+  &:hover  + .custom-toggle__icon {
+    border: 1px solid $color-default-white;
+    background-color: $color-default-blue;
+
+    &::before {
+      border-color: $color-transparent;
+    }
+  }
+
+  &:focus + .custom-toggle__icon {
     border: 1px solid $color-default-white;
     background-color: $color-default-blue;
 
@@ -126,4 +135,15 @@
       border-color: rgba(255, 255, 255, 0.7);
     }
   }
+
+  &:focus + .custom-toggle__icon {
+    border: 1px solid $color-default-white;
+    background-color: $color-default-blue;
+
+    &::before {
+      border-color: $color-default-white;
+    }
+  }
+
+
 }
